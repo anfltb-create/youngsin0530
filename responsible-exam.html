@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsible-exam</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color:inherit;}
+
+        header{
+            width: 100%; height: 50px;
+            justify-content: space-between;
+            background-color: rgb(164, 56, 9);
+        }
+        body{
+            background-color: blanchedalmond;
+            
+        }
+        main{
+            width: 1200px;
+            margin: 0 auto;
+            background-color: blanchedalmond;
+        }
+        h3{
+            margin-left: 15px;
+            margin-bottom: 20px;
+        }
+        .img-wrap p{
+            width: 120px; height: 30px;
+            background-color: #fff;
+            text-align: center;
+        }
+        .gnb-wrap{
+            width: 1500px;
+            display: flex;
+            justify-content: space-around;
+            margin: 0 auto;
+            gap: 80px;
+        }
+        .gnb-wrap h2{
+            line-height: 2.5;
+            font-size: 20px;
+        }
+        .gnb{
+            display: flex;
+            gap:20px;
+            color:#bbb;
+            line-height: 2.5;
+        }
+        .main-hero{
+            display: flex;
+            justify-content: space-around;
+            padding-top: 70px;
+            }
+        .main-hero img{
+            width: 400px; height: 250px;
+            border-radius: 10px;
+        }
+        .text-wrap{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .text-wrap p{
+            font-size: 15px;
+            color:#777;
+            font-weight: 500;
+        }
+        .text-wrap a{
+            background-color: rgb(221, 122, 16);
+            width: 70px;
+            text-align: center;
+            border-radius: 5px;
+            padding: 10px;
+            color:#fff;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .box1 , 
+        .box2{
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;        
+        }
+        
+        .box1 img{
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            margin:10px 10px;
+        }
+    
+        .img-wrap{
+            display: flex;
+        }
+        .box1 .img-wrap>li{
+            position: relative;
+        }
+        .box-inner .coffee-text{
+            background-color: #ffffff86;
+            padding: 18px;
+            position: absolute;
+            width: 265px;
+            top:80px; left: 90px;
+            transform: translateX(-80px);
+            font-size:15px;
+            font-weight: 600;
+            text-shadow: 0 0 5px #fff;
+        }
+        .box2 img{
+            width: 300px;
+            height: 250px;
+            border-radius: 10px;
+            margin:10px 10px;
+        }
+        .box2 .img-wrap{
+            background-color: rgb(243, 222, 195);
+            padding-bottom:20px;
+            border-radius: 10px;
+            margin: 30px 0px 0 15px;
+        }
+        .box2 .img-wrap > li{
+            position: relative;
+        }
+        .box2 .coffee-text2{
+            position: absolute;
+            bottom:14px; left:95px;
+            border-radius: 30px 30px 0px 0px ;
+            font-size: 14px;
+            line-height: 2;
+        }
+        footer{
+            height: 170px;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            background-color: #222;
+            color:#fff;
+            text-align: center;
+        }
+        footer h2{
+            font-size:16px;
+            margin-bottom: 10px;
+        }
+        address{
+            color:#aaa;
+            font-style: normal;
+            font-size: 13px;
+        }
+        footer p {
+            font-size: 13px;
+            color:#aaa;
+        }
+
+        @media (max-width:766px){
+            header{
+                width: 100%;
+                height: 50px;
+                background-color: #fff;
+            }
+            h3{
+                margin-left: 30px;
+            }
+            .gnb-wrap{
+                width: 100%;
+                margin-left:0;
+                justify-content: flex-start;
+            }
+            .gnb-wrap h2{
+                display: flex-start;
+                margin-left: 20px;
+                font-size: 16px;
+                line-height: 3;
+            }
+            .gnb{
+                display: none;
+
+            }
+            main{
+                width: 90%;
+            }
+            .main-hero{
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+                padding-top:80px;
+            }
+            .main-hero img{
+                width: 90%;
+            }
+            .text-wrap{
+                align-items: center;
+                text-align: center;
+                gap:25px;
+            }
+            .text-wrap h2{
+                font-size:30px;
+                line-height: 1.6;
+            }
+            .text-wrap a{
+                padding: 10px 5px;
+            }
+            .box-inner{
+                width: 100%;
+                margin: 0 auto;
+            }
+            .box-inner .coffee-text{
+                width: 100%;
+                height: auto;
+                padding: 20px 0;
+                left:0; top:50%;
+                transform: translateY(-50%);   
+            }
+            .box-inner .coffee-text2{
+                left:50%; bottom:5px;
+                transform: translateX(-50%);
+            }
+            .img-wrap{
+                flex-direction: column;
+                width: 100%;
+                padding:  20px;
+                gap:10px;
+                box-sizing: border-box;
+            }
+            .img-wrap>li{
+                width: 100%;
+            }
+            .box1,
+            .box2{
+                padding:50px 0;
+            }
+            .box1 img,
+            .box2 img{
+                width: 100%;
+                margin: 0;
+                object-fit: cover;
+            }
+            .box2 .img-wrap{
+                margin-left: 0;
+            }
+            footer{
+                width: 100%;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="gnb-wrap">
+            <h2>BREW&CO</h2>
+            <ul class="gnb">
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">소개</a></li>
+                <li><a href="#">문의</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="main-hero">
+            <div class="text-wrap">
+                <h2>커피 한 잔의 여유</h2>
+                <p>
+                    바쁜 도시의 흐름 속에서 <br> 
+                    일상이 잠시 휴가처럼 느껴지는 순간,<br>
+                    도심 속 작은 쉼표를 전합니다.</p>
+                <a href="#">메뉴 보기</a>
+            </div>
+            <img src="1.avif" alt="커피 한잔의 여유">
+        </div>
+        <div class="box1">
+            <div class="box-inner">
+                <h3>왜 우리인가?</h3>
+                <ul class="img-wrap">
+                    <li>
+                        <img src="2.avif" alt="스페셜티원두">
+                        <p class="coffee-text">스페셜티 원두</p>
+                    </li>
+                    <li>
+                        <img src="3.avif" alt="매일 베이커리">
+                        <p class="coffee-text">매일 베이커리</p>
+                    </li>
+                    <li>
+                        <img src="4.avif" alt="편안한 공간">
+                        <p class="coffee-text">편안한 공간</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="box-inner">
+                <h3>인기 메뉴</h3>
+                <ul class="img-wrap">
+                    <li>
+                        <img src="5 (2).avif" alt="아메리카노">
+                        <p class="coffee-text2">아메리카노</p>
+                    </li>
+                    <li>
+                        <img src="6.avif" alt="카페라뗴">
+                        <p class="coffee-text2">카페라떼</p>
+                    </li>
+                    <li>
+                        <img src="7.avif" alt="콜드브루">
+                        <p class="coffee-text2">콜드브루</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-wrap">
+            <h2>BREW & CO</h2>
+            <address>서울 마포구 연남동</address>
+            <p>© 2026 All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
